@@ -1,0 +1,8 @@
+{
+    "apiVersion": 2,
+    "name": "blocks/example",
+    "title": "Example blocks",
+    "icon": "universal-access-alt",
+    "category": "layout",
+    "editorScript": "build/index.js"
+}

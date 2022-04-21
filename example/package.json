@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@wordpress/block-editor": "^8.5.1",
+    "@wordpress/blocks": "^11.5.1",
+    "@wordpress/i18n": "^4.6.0"
+  },
+
+  "scripts": {
+		"build": "wp-scripts build",
+		"format:js": "wp-scripts format-js",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"start": "wp-scripts start"
+	}
+}
