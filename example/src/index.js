@@ -11,11 +11,12 @@ registerBlockType('blocks/example', {
 		title: {
 			'type': "string",
 			'source': "html",
-			'selector': "p",
+			'selector': "h1",
+			default: 'hello world'
 		}
 	},
 	edit( { attributes, setAttributes} ) {
-		const { title } = attributes;
+		let { title } = attributes;
 
 		function setTitle(newTitle) {
 			setAttributes({ title: newTitle } );
@@ -24,7 +25,7 @@ registerBlockType('blocks/example', {
 		return (
 			<div>
 				<RichText
-					tagName="p"
+					tagName="h1"
 					placeholder="Name"
 					value={title}
 					onChange={setTitle}
@@ -33,6 +34,14 @@ registerBlockType('blocks/example', {
 		);
 	},
 
-	save: () => { return <p>Test</p> }
+	save: ( { attributes } ) => { 
+		const { title } = attributes;
+
+		return (
+			<div>
+				<h1>{title}</h1>
+			</div>
+		);
+	}
 
 });
